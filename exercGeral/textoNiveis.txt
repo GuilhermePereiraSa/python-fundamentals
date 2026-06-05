@@ -1,0 +1,53 @@
+Nível 1: Automação e Análise de Logs
+O Cenário: Imagine que você tem acesso a um arquivo de texto contendo logs de um servidor web. Cada linha do log possui o formato: [DATA] [IP_ORIGEM] [MÉTODO] [ENDPOINT] [STATUS_CODE].
+Exemplo de dado: 2026-05-09 192.168.1.15 POST /login 401
+
+O Desafio:
+Crie uma função em Python que receba uma lista de strings (onde cada string é uma linha do log) e retorne o endereço IP que teve o maior número de respostas com status 401 (Unauthorized). Se houver empate, retorne uma lista com os IPs empatados.
+
+O que isso treina: Manipulação de strings (split), uso de Dicionários (Hash Maps) para contagem de frequência e lógica condicional.
+
+
+
+
+
+
+Nível 2: Lógica 2D e Reflexão em Matrizes
+O Cenário: Você está trabalhando em um mapa baseado em uma grade (grid), representado por uma matriz 2D (lista de listas em Python). O número 0 representa espaço vazio e o número 1 representa uma parede.
+Exemplo:
+
+Python
+mapa = [
+  [0, 0, 0, 1],
+  [1, 0, 0, 0],
+  [0, 0, 1, 0],
+  [0, 0, 0, 0]
+]
+O Desafio:
+Escreva um script que simule o disparo de um projétil. A função deve receber a matriz, uma posição inicial (linha, coluna) e uma direção inicial (Cima, Baixo, Esquerda, Direita). O projétil avança uma casa por vez. Se bater em uma parede (1), ele deve ser refletido (inverter a direção, por exemplo, de Direita para Esquerda) e continuar o movimento. A função deve retornar o caminho percorrido (lista de coordenadas) até o projétil sair dos limites do mapa.
+
+O que isso treina: Manipulação de listas aninhadas, controle de limites (boundary conditions) para evitar erros de índice, e controle de estado (direção atual).
+
+
+
+
+
+
+
+Nível 3: Varredura de Redes (Grafos)
+O Cenário: Você precisa mapear a topologia de uma rede local. A rede é representada por um dicionário onde as chaves são os nomes das máquinas e os valores são listas das máquinas diretamente conectadas a elas.
+Exemplo:
+
+Python
+rede = {
+    'Router': ['Switch_A', 'Switch_B'],
+    'Switch_A': ['Router', 'PC_1', 'Server_DB'],
+    'Switch_B': ['Router', 'PC_2'],
+    'PC_1': ['Switch_A'],
+    'PC_2': ['Switch_B'],
+    'Server_DB': ['Switch_A']
+}
+O Desafio:
+Escreva uma função que receba este dicionário, um nó de origem (ex: 'PC_2') e um nó de destino (ex: 'Server_DB'). A função deve retornar o caminho mais curto (a menor quantidade de saltos) entre as duas máquinas.
+
+O que isso treina: Implementação de algoritmos de busca (como Breadth-First Search - BFS), uso de filas (collections.deque) e rastreamento de nós visitados para evitar loops infinitos.
