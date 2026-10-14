@@ -1,0 +1,23 @@
+[project]
+name = "primeira-rede"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Luis Chary", email = "luischary@gmail.com" }
+]
+requires-python = "<=3.14, >=3.13"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "pandas>=3.0.6",
+    "pillow>=12.3.0",
+    "pyarrow>=25.0.1",
+    "scikit-learn>=1.9.1",
+    "torch",
+    "torchvision",
+    "tqdm>=4.70.1",
+]
+
+[tool.uv]
+package = false
